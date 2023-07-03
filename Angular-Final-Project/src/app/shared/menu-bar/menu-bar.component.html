@@ -1,0 +1,19 @@
+<mat-toolbar class="menu-bar">
+    <span class="title"> Lassi Shop </span> 
+    <div>
+    
+    <mat-form-field *ngIf="userService.loggedUserDetails.type == 'user'" class="field">
+      <mat-icon class="icon">search</mat-icon><input matInput type="text" [(ngModel)]="searchText" (keyup.enter)="search()">
+    </mat-form-field>
+    </div>
+    <ul >
+      <li *ngIf="userService.loggedUserDetails.type == 'user'"><a routerLink="/user/home"><mat-icon>home</mat-icon></a></li>
+      <li *ngIf="userService.loggedUserDetails.type == 'user'"><a routerLink="/cart"><mat-icon>shopping_cart</mat-icon>
+        <div style="font-size: 10px" class="badge">{{cartsService.cartsTotal}}</div></a></li>
+        <li *ngIf="userService.loggedUserDetails.type == 'user'"><a [routerLink]="'/reachus'"><mat-icon>feedback</mat-icon></a></li>
+        <li *ngIf="userService.loggedUserDetails.type == 'admin'">
+        </li>
+      <li ><a routerLink=""><mat-icon>settings_power</mat-icon></a></li>
+    </ul>
+  </mat-toolbar>
+  

@@ -1,0 +1,73 @@
+<app-menu-bar></app-menu-bar>
+
+<ng-container *ngIf="carts.length != 0"> 
+    <div class="container">
+        <div class="card-table">
+        
+        <div class="cart.product">
+            <table class="table table-responsive" style="font-variant:small-caps; font-weight: 500; font-size: medium;">
+                <thead style="color: #c8199f;">
+                    <tr>
+                        <th>SI.NO</th>
+                        <th>Product Name</th>
+                        <th>Product Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cart of carts; let i = index" style="font-variant:normal; font-size: medium;">
+                        <td>{{i+1}}</td>
+                        <td>{{cart.productName}}</td>
+                        <td><img src="http://localhost:82/{{cart.ProductImage}}" class="img"></td>
+                        <td>{{cart.Description}}</td>
+                        <td>{{cart.Price}}</td> 
+                        <td>{{cart.Quantity}}</td>
+                        <td>{{cart.Quantity * (cart.Price ? cart.Price:0)}}</td>
+                        <td >
+                            <button (click) = "removeItem(cart.id)"><mat-icon>delete</mat-icon></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    <div class="row" style="margin-top: 10px;">
+       <div class="col-md-2" >
+        <span style="float:right; font-variant: initial; font-weight: bold;">Grand Total:</span>
+       </div>
+        <div class="col-md-2" style="font-weight: bold">
+            <span>{{grandTotal | currency:'INR'}}</span> 
+        </div>
+    </div>
+    <div class="row justify-content-end" style="margin-top: 10px;">
+        <div class="col-md-2" >
+            <button (click) = "removeAllItem()" style="float:right" class="btn"><mat-icon>delete</mat-icon>Empty Cart</button>
+        </div>
+        <div class="col-md-2">
+             <button class="btn" [routerLink]="'/user/home'"><mat-icon>shopping_cart</mat-icon>Continue shopping</button>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="carts.length == 0">
+<div class="container">
+    <div class="card">
+        <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+        <img src="http://localhost:82/cart.png" alt="">
+        <h4>Your cart is empty!</h4>
+        <h5>Looks like you haven't added anything to your cart. Go ahead & explore top categories.</h5>
+        <button routerLink = "/home" class="btn" [routerLink]="'/user/home'">Shop Now</button>
+    </div>
+</div>
+</ng-container>

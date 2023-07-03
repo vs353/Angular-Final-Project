@@ -1,0 +1,6 @@
+<div id="container">
+    
+    <app-productrow [products]="products" [producttitle]="'Eat and Explore'" 
+    *ngIf="!userService.loggedUserDetails.isAdmin"></app-productrow>
+    <app-product-grid *ngIf="userService.loggedUserDetails.isAdmin"></app-product-grid>
+</div>

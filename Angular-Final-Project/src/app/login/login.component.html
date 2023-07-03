@@ -1,0 +1,63 @@
+
+<div id="login-card" *ngIf="logform">
+
+        <table id="log-table">
+             <tr>
+                 <th>Email</th>
+                 <td><input type="text" [(ngModel)]="email"  placeholder="*email"></td>
+             </tr>
+             <tr>
+                 <th>Password</th>
+                 <td><input type="password" [(ngModel)]="password" placeholder="*password"></td>
+             </tr>
+             <tr>
+                 
+                 <td colspan=2 
+                     style="text-align:center"><button  (click)="login()">Login</button></td>
+             </tr>
+             <tr>
+                 
+                 <td colspan=2 
+                     style="text-align:center; color: #5897ae; cursor: pointer;" (click)="toggle()">Don't have an account? Sign up free</td>
+             </tr>
+        </table>
+        <div class="loading" *ngIf="status"></div>
+        <div class="errors">{{error}}</div>
+        
+    </div>
+
+
+    <div id="login-card" *ngIf="!logform">
+            <table id="log-table">
+                 <tr>
+                     <th>Username</th>
+                     <td><input type="text" [(ngModel)]="rusername" placeholder="*username"></td>
+                 </tr>
+                 <tr>
+                     <th>Password</th>
+                     <td><input type="password" [(ngModel)]="rpassword" placeholder="*password"></td>
+                 </tr>
+
+                 <tr>
+                    <th>Verify Password</th>
+                    <td><input type="password" [(ngModel)]="vpassword" placeholder="*re-enter your password"></td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td> <input type="text" [(ngModel)]="remail" placeholder="*email"></td>
+                </tr>
+                 <tr>
+                     
+                     <td colspan=2 
+                         style="text-align:center"><button (click)="register()">Register</button></td>
+                 </tr>
+                 <tr>
+                     
+                     <td colspan=2 
+                         style="text-align:center; color: #5897ae; cursor: pointer" (click)="toggle()">Already have an account? Sign in</td>
+                 </tr>  
+            </table>
+            <div class="loading" *ngIf="status"><img src="http://localhost:82/loading.gif"></div>
+            <div class="errors">{{rerror}}</div>
+    </div>

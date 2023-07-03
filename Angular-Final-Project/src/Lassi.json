@@ -1,0 +1,298 @@
+{
+  "users": [
+    {
+      "email": "salo123@gmail.com",
+      "password": "$2a$10$oSyZeJj2wy9ImnyFcuC4Fe0RLid9W6ZRO7ENhdYLg2yo9j2mumEhK",
+      "username": "salo",
+      "type": "user",
+      "id": 13
+    },
+    {
+      "email": "vaish123@gmail.com",
+      "password": "$2a$10$oSyZeJj2wy9ImnyFcuC4Fe0RLid9W6ZRO7ENhdYLg2yo9j2mumEhK",
+      "username": "vaish",
+      "type": "admin",
+      "id": 7
+    },
+    {
+      "email": "vaish1234@gmail.com",
+      "password": "$2a$10$ufdDJf2L.qgpzr2HNrrFLOPgxI8OEUbDGb.gniE/KkrCCe6SwFBfa",
+      "username": "vaish1234@gmail.com",
+      "type": "user",
+      "id": 14
+    }
+  ],
+  "Categories": [
+    {
+      "id": 1,
+      "name": "Sweet Lassi"
+    },
+    {
+      "id": 99,
+      "name": "Fruit Lassi"
+    },
+    {
+      "id": 2,
+      "name": "Special Lassi"
+    },
+    {
+      "id": 3,
+      "name": "Super Saver Combos"
+    },
+    {
+      "id": 4,
+      "name": "Oreo Shakes"
+    },
+    {
+      "id": 6,
+      "name": "Smoothies With Ice Cream"
+    },
+    {
+      "id": 7,
+      "name": "Desserts"
+    },
+    {
+      "id": 8,
+      "name": "Falooda"
+    }
+  ],
+  "Lassi-Items": [
+    {
+      "id": 1,
+      "name": "Sweet Lassi",
+      "categoryId": 1,
+      "price": 50,
+      "Description": "lassi, a creamy, frothy yogurt-based drink, blended with water and various fruits or seasonings (such as salt or sugar)",
+      "image": "Sweet-Lassi.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fruit Lassi",
+      "categoryId": 1,
+      "price": 70,
+      "Description": "Fruit lassi is a traditional Indian drink made with yogurt (dahi) and mango, also used in Ayurvedic medicine to purify the body and the spirit, and that is also great for taming the heat of spicy dishes",
+      "image": "Fruit-Lassi.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mango Lassi",
+      "categoryId": 1,
+      "price": 70,
+      "Description": "Mango lassi is a traditional Indian drink made with yogurt (dahi) and mango, also used in Ayurvedic medicine to purify the body and the spirit, and that is also great for taming the heat of spicy dishes",
+      "image": "Mango-Lassi.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Dry Fruit Lassi",
+      "categoryId": 1,
+      "price": 80,
+      "Description": "Lassi is a proper traditional yoghurt based drink. It is a blend of yoghurt, water, spices, dry fruits and sometimes tropical fruits",
+      "image": "DryFruit-Lassi.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Chocolate Lassi",
+      "categoryId": 2,
+      "price": 80,
+      "Description": "Chocolate Lassi is a flavoured refreshing drink made by blending curd with chocolate shavings, coco powder & sugar. Chocolate Lassi beats the summer heat and could be made in minutes. Chocolate Lassi is filling, delicious and the family will come for more",
+      "image": "Chocolate-Lassi.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Strawberry Lassi",
+      "categoryId": 2,
+      "price": 70,
+      "Description": "Strawberry lassi is a creamy, fruity, rose scented lassi made with yogurt, strawberries, cream and rose water",
+      "image": "Strawberry-Lassi.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Blueberry Lassi",
+      "categoryId": 2,
+      "price": 90,
+      "Description": "nchanting Banana Blueberry Lassi is a yogurt based smoothie, which is considered to be a healthy & nutritious drink.",
+      "image": "Blueberry-Lassi.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Mango Lassi with Peri Peri Fries",
+      "categoryId": 3,
+      "price": 160,
+      "Description": "It's made from ground coriander, salt, garlic powder, onion powder, dried oregano, dried parsley, paprika, ground nutmeg, ground ginger, ground cardamom, smoked paprika, and cayenne pepper",
+      "image": "PeriPeri-Lassi.jfif"
+    },
+    {
+      "id": 9,
+      "name": "Sweet Lassi with Cheese Corn Nuggets",
+      "categoryId": 3,
+      "price": 160,
+      "Description": "It has a cheey and cremy texture with delicious sweet corns in it that is further finely coated in crispy golden bread crumbs.",
+      "image": "SweetLassi-Nuggets.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Kiwi Lassi with Chilli Garlic Pops",
+      "categoryId": 3,
+      "price": 160,
+      "Description": "Blend kiwi pieces, thick yoghurt, honey and vanilla extract with enough water to make a smooth drink.",
+      "image": "Kiwi-Lassi.jfif"
+    },
+    {
+      "id": 11,
+      "name": "Oreo Shake",
+      "categoryId": 4,
+      "price": 99,
+      "Description": "Made with Oreo cookies, milk, vanilla ice cream, sugar, and chocolate sauce, this thick oreo shake recipe will take over your taste buds",
+      "image": "Oreo-Shake.jfif"
+    },
+    {
+      "id": 12,
+      "name": "Oreo Chips Shake",
+      "categoryId": 4,
+      "price": 125,
+      "Description": "Chocolate milk is made with milk and chocolate syrup (usually made with cocoa powder, sugar, and a bit of water) and a chocolate milkshake is made with milk, chocolate syrup, and ice cream, so it's much richer, thicker, and frostier.",
+      "image": "OreoChips-Shake.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Nutella Oreo Shake",
+      "categoryId": 4,
+      "price": 129,
+      "Description": "Nutella Milkshake is a delicious recipe made using just 3 simple ingredients – chilled milk, vanilla ice cream, and Nutella. It gets its rich and creamy texture from vanilla ice cream and the chocolaty, nutty flavor from Nutella.",
+      "image": "NutellaOreo-Shake.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Oreo Coffee",
+      "categoryId": 5,
+      "price": 145,
+      "Description": "The addition of Oreos gives the classic cold coffee a nice chocolaty and creamy texture and makes it even more delicious.",
+      "image": "Oreo-Coffee.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Nutella Coffee",
+      "categoryId": 5,
+      "price": 145,
+      "Description": "Nutella Coffee is a delicious beverage where your regular frothy coffee is mixed with Nutella",
+      "image": "Nutella-Coffee.jfif"
+    },
+    {
+      "id": 17,
+      "name": "KitKat Coffee",
+      "categoryId": 5,
+      "price": 145,
+      "Description": "Nestle Kit Kat Chocolate Coffee Break is the moderately sweet chocolate which is the perfect aftertaste for Gold Blend, which is mild and low in acidity",
+      "image": "KitKat-Coffee.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Strawberry Banana Smoothie with Ice Cream",
+      "categoryId": 6,
+      "price": 109,
+      "Description": "A strawberry-Banana smoothie is a great source of protein, fibre, vitamins and minerals, and it helps with hydration.",
+      "image": "Strawberry-Banana-Smoothie.jfif"
+    },
+    {
+      "id": 19,
+      "name": "Mango Banana Smoothie with Ice Cream",
+      "categoryId": 6,
+      "price": 109,
+      "Description": "Combine mangos, banana, vanilla yogurt, and milk in a blender; blend until smooth.",
+      "image": "Mango-Banana-Smoothie.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Blueberry Smoothie with Ice Cream",
+      "categoryId": 6,
+      "price": 109,
+      "Description": "Packed with antioxidants, they pack a lot of nutrients into a small, low-calorie package. You get a generous dose of fiber, Vitamin C, Vitamin K, and manganese in every one cup serving of blueberries.",
+      "image": "Blueberry-Smoothie.jfif"
+    },
+    {
+      "id": 21,
+      "name": "Mexican Brownie Ice Cream Sundae",
+      "categoryId": 7,
+      "price": 89,
+      "Description": "",
+      "image": "Mexican-Brownie.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Nutella Brownie Ice Cream Sundae",
+      "categoryId": 7,
+      "price": 159,
+      "Description": "",
+      "image": "Nutella-Brownie.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Gudbud",
+      "categoryId": 7,
+      "price": 119,
+      "Description": "",
+      "image": "Gudbud.jfif"
+    },
+    {
+      "id": 24,
+      "name": "Falooda",
+      "categoryId": 8,
+      "price": 110,
+      "Description": "",
+      "image": "Falooda.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Kesar Falooda",
+      "categoryId": 8,
+      "price": 120,
+      "Description": "",
+      "image": "Kesar-Falooda.jpg"
+    }
+  ],
+  "cart": [],
+  "feedbacks": [
+    {
+      "id": 9524,
+      "name": "vaish",
+      "email": "vaish@gmail.com",
+      "type": "Lassi",
+      "message": "This place is absolutely great and the Lassi tastes fantastic. "
+    },
+    {
+      "id": 6871,
+      "name": "salo",
+      "email": "salo@gmail.com",
+      "type": "Lassi",
+      "message": "This place is absolutely great and the Lassi tastes fantastic. "
+    },
+    {
+      "id": 1524,
+      "name": "shiro",
+      "email": "shiro@gmail.com",
+      "type": "Oreo Shakes",
+      "message": "I have tried and believe me it has exact taste of Oreo. Loved oreo Milkshakes at home !! I'm see the best experience with oreo is the best and recommend by me to my all friends my friend is happy with this products. Just best ever I'm used much products but the this was the best."
+    },
+    {
+      "id": 4615,
+      "name": "shankar",
+      "email": "shankar@gmail.com",
+      "type": "Lassi",
+      "message": "this place is absolutely great and lassi tastes good"
+    },
+    {
+      "id": 3116,
+      "name": "bellcy",
+      "email": "bellcy@gmail.com",
+      "type": "Special Lassi",
+      "message": "This place is absolutely great and the Lassi tastes fantastic."
+    },
+    {
+      "id": 8353,
+      "name": "Final-Review",
+      "email": "Sal@gmail.com",
+      "type": "Lassi",
+      "message": "This place is absolutely great and the Lassi tastes fantastic."
+    }
+  ]
+}

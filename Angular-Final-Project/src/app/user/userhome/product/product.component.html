@@ -1,0 +1,8 @@
+<div class="product" (click)="changeRoute()">
+    <div class="product-image">
+           <img src="http://localhost:82/{{product.image}}"/>
+    </div>
+    <div class="h2">{{product.name}}</div>
+    <div class="h6"> Price {{product.price | currency :"INR"}}</div>
+</div>
+

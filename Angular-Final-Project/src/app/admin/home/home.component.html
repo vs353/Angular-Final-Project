@@ -1,0 +1,80 @@
+<app-menu-bar></app-menu-bar>
+<mat-toolbar style="color: rgb(198, 82, 240);">
+    <button mat-raised-button style="background-color: #5897ae; color: #eef3f5;" (click)="openAddEditProduct()">
+      Add Product
+    </button>
+  </mat-toolbar>
+  
+  <div class="main-body">
+    <mat-form-field>
+      <mat-label>Search for Product</mat-label>
+      <input matInput (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+  
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; margin-left:20px; font-size: 20px; font-family: 'Gill Sans'; color: black;">
+            ID
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; margin-left:20px; font-size: 20px; font-family: 'Gill Sans'; color: black;">
+            Product Name
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.name}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="image">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; margin-left:20px; font-size: 20px; font-family: 'Gill Sans'; color: black;text-align: center;">
+            Product Image
+          </th>
+          <td mat-cell *matCellDef="let row" style="text-align: justify;">{{row.image}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; margin-left:20px; font-size: 20px; font-family: 'Gill Sans'; color: black; width: 35%; text-align: center">
+            Product Description
+          </th>
+          <td mat-cell *matCellDef="let row" style="text-align: justify;">{{row.Description}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; font-size: 20px; margin-left:20px; font-family: 'Gill Sans'; color: black; padding-left: 20px;">
+            Product Price
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.price}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; font-size: 20px; margin-left:20px; font-family: 'Gill Sans'; color: black;">
+            Product Type
+          </th>
+          <td mat-cell *matCellDef="let row">{{row.categoryId}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bolder; font-size: 20px; margin-left:20px; font-family: 'Gill Sans'; color: black;">
+            Action
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <button style="border: none;">
+              <mat-icon style="color: #5897ae;" (click)="openEditProduct(row)">edit</mat-icon>
+            </button>
+            <button style="border: none;">
+              <mat-icon color="#5897ae" (click)="deleteCategory(row.id)">delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

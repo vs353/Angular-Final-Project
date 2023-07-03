@@ -1,0 +1,86 @@
+#Productdetails-container
+{
+    overflow: hidden;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+#image-block{
+   float:left;
+   width: 30%;
+   min-height: 100px;
+   padding: 50px;
+   padding-top:10px;
+   text-align: center;
+}
+
+#image-block img{
+    height: 90%;
+    width: 90%;
+    box-shadow: 2px 2px 30px rgb(161, 161, 161);
+    border: 1px solid rgb(192, 255, 206);
+}
+
+
+#description-block{
+    float: left;
+    width: 60%;
+    min-height: 500px;
+    padding: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c8199f;
+    font-weight: 500;
+    
+}
+
+#description-block p{
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #242222;
+    font-size: medium;
+    font-weight:600;
+}
+
+#description-block h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: #c8199f;
+    font-weight: bold;
+}
+
+#description-block h3{
+    font-variant: small-caps;
+    font-weight:bold;
+    font-size:x-large;
+}
+
+#description-block h5{
+    font-weight:bold;
+}
+
+#description-block button{
+    margin-top: 50px;
+    color: rgb(247, 254, 249);
+    background-color: #c8199f
+}
+
+#description-block input[type="number"]{
+    border: 1px solid #5897ae;
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 20px;
+    color: #5897ae;
+
+}
+
+@media only screen and (max-width: 720px) {
+    #image-block{
+          float: none;
+          width: 100%;
+          height: 100px;
+    }
+    #description-block{
+        float: none;
+    }
+}

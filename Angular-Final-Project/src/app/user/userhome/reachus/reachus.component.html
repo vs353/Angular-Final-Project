@@ -1,0 +1,82 @@
+<app-menu-bar></app-menu-bar>
+<h3 style="text-align: center; font-family: cursive; font-weight: bolder; color: #c8199f;">Fill your Feedback</h3>
+  
+    <div class="rform" >
+        <form  [formGroup]="feedbackForm"  (submit)="saveFeedback()">
+               <table>
+                   <tr>
+                   <th>Name</th>
+                   <td><input type="text" formControlName="name"></td>
+                   <td>
+                          <div *ngIf='feedbackForm.controls.name.hasError("required")'>
+                            *required</div>
+                       <div *ngIf='feedbackForm.controls.name.hasError("minlength")'>
+                                      Atleast Three Characters long</div>
+                   </td>
+                   </tr>
+                    <tr>
+                   <th>Email</th>
+                   <td><input type="text" formControlName="email"></td>
+                   <td>
+                          <div *ngIf='feedbackForm.controls.email.hasError("required")'>
+                                  *required</div>
+                          <div *ngIf='feedbackForm.controls.email.hasError("pattern")'>
+                                      Should be in email format</div>
+                   </td>
+                   </tr>
+                   <tr>
+                   <th>Type</th>
+                   <td><select formControlName="type">
+                       <option *ngFor="let x of types">{{x}}</option>
+                      </select>
+                      </td>
+                   <td></td>
+                   </tr>
+                   <tr>
+                       <th>Message</th>
+                       <td><textarea rows=6 cols=50 formControlName="message">
+                           </textarea></td>
+                       <td>
+                              <div *ngIf='feedbackForm.controls.message.hasError("required")'>
+                                *required</div>
+                            <div *ngIf='feedbackForm.controls.message.hasError("minlength")'>
+                                        Atleast 15 characters long</div>
+                       </td>
+                   </tr>
+                   <tr><td colspan="3" style="text-align:center">
+                          <button type="submit"  class="btn" [disabled]="!feedbackForm.valid">
+                                     Post Feedback</button>
+                      </td></tr>
+               </table>
+          
+          
+          </form>
+          </div>
+          <div>
+            <h3 style="text-align: center; font-family: cursive; font-weight: bolder; color: #c8199f;">Feedbacks</h3>
+          <div *ngIf="feedbacks">
+            <table class="table table-responsive" >
+                <thead style="color: #c8199f;">
+                    <tr>
+                        <th>S No.</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let feed of feedbacks; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{feed.name }}</td>
+                        <td>{{feed.email}}</td>
+                        <td>{{feed.type}}</td>
+                        <td>{{feed.message}}</td> 
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

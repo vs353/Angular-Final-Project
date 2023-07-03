@@ -1,0 +1,46 @@
+<div mat-dialog-title>
+    <h1>Product Form</h1>
+  </div>
+  
+  <form [formGroup]="ItemForm" *ngIf="types" (ngSubmit)="onFormSubmit()">
+
+<mat-form-field appearance="outline">
+    <mat-label>Item Name</mat-label>
+    <input formControlName="name" matInput placeholder="Name">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <mat-select formControlName="categoryId">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let x of types" [value]="x.id">{{x.name}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea formControlName="description" matInput></textarea>
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input formControlName="price" matInput type="number" placeholder="price">
+</mat-form-field>
+
+<mat-form-field appearance="outline">
+    <mat-label>Image</mat-label>
+    <input formControlName="image" matInput type="text" placeholder="image">
+</mat-form-field>
+
+<div mat-dialog-actions class="action">
+  <button class="save" mat-raised-button style="background-color: #5897ae; color: #e7f0f3; "  type="submit" >{{ data ? 'Update' : 'Save' }}</button>
+</div>
+
+<div mat-dialog-actions class="action">
+  <button class="cancel" mat-raised-button style="background-color: #5897ae; color: #e7f0f3;" type="button" [mat-dialog-close]="false">Cancel</button>
+</div>
+</form>  
+
+ 
+
+  
